@@ -19,9 +19,17 @@ config/icon="res://icon.svg"
 
 Signal_Debugger="*res://addons/SignalVisualizer/Debugger/SignalDebugger.gd"
 
+[display]
+
+window/size/viewport_width=640
+window/size/viewport_height=360
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="canvas_items"
+
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/SignalVisualizer/plugin.cfg", "res://addons/script-dock/plugin.cfg")
+enabled=PackedStringArray("res://addons/SignalVisualizer/plugin.cfg")
 
 [file_customization]
 
@@ -32,6 +40,13 @@ folder_colors={
 [filesystem]
 
 import/blender/enabled=false
+import/fbx/enabled=false
+
+[importer_defaults]
+
+animation_library={
+"animation/fps": 60.0
+}
 
 [input]
 
@@ -60,6 +75,13 @@ move_down={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Terrain"
+2d_physics/layer_2="Player"
+2d_physics/layer_3="Enemy"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+viewport/hdr_2d=true

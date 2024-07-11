@@ -1,13 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://fuscp8m66441"]
+[gd_scene load_steps=5 format=3 uid="uid://fuscp8m66441"]
 
 [ext_resource type="Texture2D" uid="uid://cdg3m23ga7chi" path="res://scenes/player/player.png" id="1_0cn26"]
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_32rhf"]
+[ext_resource type="PackedScene" uid="uid://dcbkqv4o02ua2" path="res://scenes/ability/sword_ability_controller/sword_ability_controller.tscn" id="2_ob0cq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8ugns"]
 radius = 6.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_32rhf")
+
+[node name="AbilityManager" type="Node" parent="."]
+
+[node name="SwordAbilityController" parent="AbilityManager" instance=ExtResource("2_ob0cq")]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(1, 1.00172)

@@ -8,7 +8,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	var movement_vector = get_movement_vector()
 	
 	# 获得一个移动方向的单位向量，相当于适配了各个方向，不再局限于上下左右四个方向
