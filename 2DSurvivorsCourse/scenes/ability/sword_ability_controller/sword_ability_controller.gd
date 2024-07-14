@@ -1,13 +1,12 @@
 extends Node
 
-@export var sword_ability:PackedScene
+@export var sword_ability: PackedScene
 
 const MAX_RANGE = 150
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	$Timer.timeout.connect(on_timer_timeout)
 
 
 func on_timer_timeout() -> void:

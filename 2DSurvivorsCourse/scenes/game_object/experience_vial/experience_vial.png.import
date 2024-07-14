@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjc7336xnokq0"
-path="res://.godot/imported/mouse.png-33d0ba41b15448befe6432f81d03f218.ctex"
+uid="uid://djatau1qy2unw"
+path="res://.godot/imported/experience_vial.png-dbf1ea34f61212251cf060e6e03a4355.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/basic_enemy/mouse.png"
-dest_files=["res://.godot/imported/mouse.png-33d0ba41b15448befe6432f81d03f218.ctex"]
+source_file="res://scenes/game_object/experience_vial/experience_vial.png"
+dest_files=["res://.godot/imported/experience_vial.png-dbf1ea34f61212251cf060e6e03a4355.ctex"]
 
 [params]
 

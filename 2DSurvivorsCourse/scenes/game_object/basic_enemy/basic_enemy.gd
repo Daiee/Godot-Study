@@ -1,15 +1,13 @@
 extends CharacterBody2D
 
-const MAX_SPEED = 75 #速度
+const MAX_SPEED = 50 
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	$Area2D.area_entered.connect(on_area_entered)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta) -> void:
+func _process(_delta: float) -> void:
 	var direction: Vector2 = get_player_direction() # 方向
 	self.velocity = direction * MAX_SPEED
 	move_and_slide()
@@ -24,5 +22,5 @@ func get_player_direction() -> Vector2:
 	return Vector2.ZERO
 
 
-func on_area_entered(_area) -> void:
+func on_area_entered(_area: Area2D) -> void:
 	queue_free()

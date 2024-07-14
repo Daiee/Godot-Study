@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://d34rkcdmd0wu3"]
 
-[ext_resource type="Script" path="res://scenes/basic_enemy/basic_enemy.gd" id="1_w7k40"]
-[ext_resource type="Texture2D" uid="uid://cjc7336xnokq0" path="res://scenes/basic_enemy/mouse.png" id="2_3oapr"]
+[ext_resource type="Script" path="res://scenes/game_object/basic_enemy/basic_enemy.gd" id="1_w7k40"]
+[ext_resource type="Texture2D" uid="uid://cjc7336xnokq0" path="res://scenes/game_object/basic_enemy/mouse.png" id="2_3oapr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uw30p"]
 
@@ -9,8 +9,9 @@
 radius = 6.0
 
 [node name="BasicEnemy" type="CharacterBody2D" groups=["enemy"]]
-collision_layer = 0
-collision_mask = 0
+collision_layer = 8
+collision_mask = 8
+motion_mode = 1
 script = ExtResource("1_w7k40")
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -28,5 +29,3 @@ offset = Vector2(0, -4)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, -6)
 shape = SubResource("CircleShape2D_ulcko")
-
-[connection signal="area_entered" from="Area2D" to="." method="on_area_entered"]
