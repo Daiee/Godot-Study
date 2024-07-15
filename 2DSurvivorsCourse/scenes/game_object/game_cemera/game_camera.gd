@@ -1,6 +1,6 @@
 extends Camera2D
 
-var target_position = Vector2.ZERO
+var target_position: Vector2 = Vector2.ZERO
 
 
 func _ready() -> void:

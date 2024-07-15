@@ -2,7 +2,7 @@ extends CanvasLayer
 
 @export var arena_time_manager: Node
 
-@onready var label = $%Label
+@onready var label: Label = $%Label
 
 
 func _process(_delta: float) -> void:

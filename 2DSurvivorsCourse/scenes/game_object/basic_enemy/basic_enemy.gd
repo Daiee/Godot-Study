@@ -1,14 +1,12 @@
 extends CharacterBody2D
 
-const MAX_SPEED = 50 
+const MAX_SPEED = 40 
 
-
-func _ready() -> void:
-	$Area2D.area_entered.connect(on_area_entered)
+@onready var health_component: HealthComponent = $HealthComponent
 
 
 func _process(_delta: float) -> void:
-	var direction: Vector2 = get_player_direction() # 方向
+	var direction: Vector2 = get_player_direction() # 方向O
 	self.velocity = direction * MAX_SPEED
 	move_and_slide()
 
@@ -20,7 +18,3 @@ func get_player_direction() -> Vector2:
 	if player_node != null:
 		return (player_node.global_position - global_position).normalized()
 	return Vector2.ZERO
-
-
-func on_area_entered(_area: Area2D) -> void:
-	queue_free()

@@ -1,6 +1,6 @@
 extends Node
 
-var current_experience = 0
+var current_experience: float = 0
 
 
 func _ready() -> void:
