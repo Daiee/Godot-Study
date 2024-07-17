@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://sob8rj1xfbyb"]
+
+[ext_resource type="Script" path="res://scenes/ui/ability_upgrade_card.gd" id="1_2p88j"]
+
+[node name="AbilityUpgradeCard" type="PanelContainer"]
+custom_minimum_size = Vector2(120, 150)
+size_flags_horizontal = 8
+size_flags_vertical = 4
+script = ExtResource("1_2p88j")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+text = "AbilityName"
+autowrap_mode = 2
+
+[node name="descriptionLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+text = "剑的攻速增加10%"
+autowrap_mode = 2
