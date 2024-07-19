@@ -6,7 +6,7 @@ const MAX_RANGE = 150
 
 @onready var timer: Timer = $Timer
 
-var base_wait_time: float
+var base_wait_time: float 
 
 
 func _ready() -> void:
@@ -15,6 +15,9 @@ func _ready() -> void:
 	GameEvents.ability_upgrade_added.connect(on_ability_upgrade_added)
 
 
+## 时间结束生成Axe
+## 信号发起： sword_ability_controller
+## 信号处理： sword_ability_controller
 func on_timer_timeout() -> void:
 	var player = get_tree().get_first_node_in_group("player") as Node2D
 	if player == null:
@@ -44,6 +47,9 @@ func on_timer_timeout() -> void:
 	sword_instance.rotation = enemy_direction.angle()
 
 
+## 时间结束生成Axe
+## 信号发起： sword_ability_controller
+## 信号处理： sword_ability_controller
 func on_ability_upgrade_added(upgrade: AbilityUpgrade, current_upgrades: Dictionary) -> void:
 	if upgrade.id != "sword_rate":
 		return
@@ -54,4 +60,3 @@ func on_ability_upgrade_added(upgrade: AbilityUpgrade, current_upgrades: Diction
 	
 	timer.wait_time = base_wait_time * (1 - percent_reduction)
 	timer.start()
-	print(timer.wait_time)

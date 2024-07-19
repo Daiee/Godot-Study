@@ -17,5 +17,4 @@ func set_ability_upgrade(upgrade: AbilityUpgrade) -> void:
 
 func on_gui_input(event: InputEvent) -> void:
 	if event.is_action_pressed("left_click"):
-		print("left_click")
 		selected.emit()

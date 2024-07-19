@@ -12,6 +12,7 @@ func _ready() -> void:
 	current_health = max_health
 
 
+# 处理受到的伤害
 func damage(damage_amount: float) -> void:
 	current_health = max(current_health - damage_amount, 0)
 	health_changed.emit()
@@ -22,6 +23,7 @@ func get_health_percent() -> float:
 	if current_health <= 0:
 		return 0
 	return min(current_health / max_health, 1)
+
 
 func check_death() -> void:
 	if current_health == 0:

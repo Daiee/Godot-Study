@@ -17,7 +17,6 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Signal_Debugger="*res://addons/SignalVisualizer/Debugger/SignalDebugger.gd"
 GameEvents="*res://scenes/autoload/game_events.tscn"
 
 [display]
@@ -27,16 +26,6 @@ window/size/viewport_height=360
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="canvas_items"
-
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/SignalVisualizer/plugin.cfg")
-
-[file_customization]
-
-folder_colors={
-"res://addons/": "gray"
-}
 
 [filesystem]
 

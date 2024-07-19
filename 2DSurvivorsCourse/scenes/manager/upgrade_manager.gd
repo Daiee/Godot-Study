@@ -35,4 +35,3 @@ func apply_upgrade(upgrade: AbilityUpgrade) -> void:
 
 func on_upgrade_selected(upgrade: AbilityUpgrade) -> void:
 	apply_upgrade(upgrade)
-	
